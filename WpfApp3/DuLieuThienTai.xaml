@@ -1,0 +1,37 @@
+﻿<Window x:Class="WpfApp3.DuLieuThienTai"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="DuLieuThienTai" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="Datagrid" AutoGenerateColumns="False" FontStretch ="UltraCondensed" Style="{DynamicResource MaterialDesignDataGrid}">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Mã Thiên Tai" Width="auto" Binding="{Binding MaThienTai}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Loại Thiên Tai" Width="auto" Binding="{Binding LoaiThienTai}"></DataGridTextColumn>
+
+                <DataGridTextColumn Header="Địa Điểm" Width="auto" Binding="{Binding DiaDiem}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Mức Độ" Width="auto" Binding="{Binding MucDoThietHai}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Thời gian">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding ThoiGian}" BorderThickness="0"></DatePicker>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
