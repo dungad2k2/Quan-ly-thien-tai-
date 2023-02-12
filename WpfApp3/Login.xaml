@@ -1,0 +1,92 @@
+﻿<Window x:Class="WpfApp3.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Login" Height="350" Width="525"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="Image/Bgimage.png"/>
+    </Window.Background>
+    <Grid>
+        
+        <TextBlock Height="23" 
+                   HorizontalAlignment="Left" 
+                   Margin="10,10,0,0" 
+                   Name ="LoginHeading"
+                   Text="Thông tin đăng nhập:" 
+                   VerticalAlignment="top"
+                   FontSize="17"
+                   FontStretch="ExtraCondensed"
+                   ></TextBlock>
+        <TextBlock Height="50"
+                   HorizontalAlignment="Left"
+                   Margin ="24,48,0,0"
+                   Name ="TextBlockHeading"
+                   VerticalAlignment="Top"
+                   FontSize="12"
+                   FontStyle="Italic"
+                   Padding="5">
+         Ghi chú: Vui lòng nhập tên đăng nhập và mật khẩu. Sau đó nhấn vào "Đăng nhập" <LineBreak/>
+         Nếu chưa có tài khoản vui lòng nhấp vào nút 
+            <TextBlock>
+                <Hyperlink FontSize="14" 
+                           FontStyle="Normal">
+                    Đăng ký
+                </Hyperlink>
+                           
+            </TextBlock>
+        </TextBlock>
+        <TextBlock Height="23"
+                   HorizontalAlignment="Left"
+                   Margin="60 120 0 0"
+                   Name ="TextBlock1"
+                   Text = "Tên đăng nhập"
+                   VerticalAlignment="Top"
+                   Width="77"/>
+        <TextBlock Height="23"
+                   HorizontalAlignment="Left"
+                   Margin="58 168 0 0"
+                   Name ="TextBlock2"
+                   Text="Mật Khẩu"
+                   VerticalAlignment="Top"
+                   Width="77"/>
+        <TextBox   Height="23"
+                   HorizontalAlignment="Left"
+                   Margin="170 120 0 0"
+                   Name ="txttendangnhap"
+                   VerticalAlignment="Top"
+                   Width="172"/>
+        <PasswordBox   Height="23"
+                   HorizontalAlignment="Left"
+                   Margin="170 168 0 0"
+                   Name ="txtmatkhau"
+                   VerticalAlignment="Top"
+                   Width="172"/>
+        <Button   Content="Đăng nhập"
+                  Height="23"
+                  HorizontalAlignment="Left"
+                  Margin="128 211 0 0"
+                  Name ="btdangnhap"
+                  VerticalAlignment="Top"
+                  Width="104"
+                  Click="dangnhap_click"/>
+        <Button   Content="Thoát"
+                  Height="23"
+                  HorizontalAlignment="Left"
+                  Margin="256 211 0 0"
+                  Name ="btthoat"
+                  VerticalAlignment="Top"
+                  Width="104" Click="btthoat_Click" />
+        <TextBlock Height="23" 
+                   HorizontalAlignment="Left"
+                   x:Name="errormessage"
+                   VerticalAlignment="Top"
+                   Width="247"
+                   Margin="118 253 0 0"
+                   OpacityMask="Crimson"
+                   Foreground="#FFE5572C"/>
+    </Grid>
+</Window>
