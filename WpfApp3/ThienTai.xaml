@@ -5,29 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="ThienTai" Height="450" Width="800">
+        Title="ThienTai" Height="500" Width="800">
 
     <Grid RenderTransformOrigin="0.506,0.427">
-        <Button Margin="429,344,230,58" Click="Button_Click" >
+        <Button Margin="410,356,230,96" 
+                Click="Button_Click">
             Thêm
         </Button>
-        <Button  Margin="641,344,10,58" Click="Button_Click_1">
+        <Button  Margin="641,356,10,96" Click="Button_Click_1">
             Xóa
         </Button>
-        <Button Margin="10,344,665,58" RenderTransformOrigin="0.5,1.025">
+        <Button Margin="0,356,665,96" RenderTransformOrigin="0.5,1.025" Click="Sua_Click">
             Sửa
         </Button>
-        <Button Height="100" Margin="300,183,349,151" Click ="xem_click" >
+        <Button Height="100" Margin="300,242,349,142" Click ="xem_click" >
             Xem dữ liệu
         </Button>
-        <Button  Margin="209,344,448,58">
+        <Button  Margin="190,356,456,96" Click="TimKiem_Click">
             Tìm Kiếm
         </Button>
-        <TextBox x:Name="Ma" Margin="10,10,520,364" RenderTransformOrigin="0.375,0.46">Mã thiên tai</TextBox>
-        <TextBox x:Name="Loai" Margin="275,107,255,263">Loại thiên tai</TextBox>
-        <TextBox x:Name="Dia" Margin="0,107,530,263" RenderTransformOrigin="0.539,-0.344">Địa điểm</TextBox>
-        <TextBox x:Name="Muc" Margin="550,107,10,263">Mức độ</TextBox>
-        <TextBox x:Name="Thoi" Margin="300,6,230,364">Thời gian</TextBox>
+        <TextBox x:Name="Ma" 
+                 Margin="10,65,520,364"
+                 RenderTransformOrigin="0.375,0.46"
+                 TextWrapping="Wrap"
+                 >Mã thiên tai</TextBox>
+        <TextBox 
+            x:Name="Loai" 
+            Margin="275,164,255,263"
+            TextWrapping="Wrap"
+            
+            >Loại thiên tai</TextBox>
+        <TextBox x:Name="Dia"
+                 Margin="0,164,530,263"
+                 RenderTransformOrigin="0.539,-0.344"
+                 TextWrapping="Wrap"
+                 >Địa điểm</TextBox>
+        <TextBox x:Name="Muc"
+                 Margin="550,164,10,263"
+                 TextWrapping="Wrap"
+                 >Mức độ</TextBox>
+        <TextBox x:Name="Thoi" 
+                 Margin="300,65,230,364"
+                 TextWrapping="Wrap"
+                 >Thời gian</TextBox>
 
 
 

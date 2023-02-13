@@ -45,7 +45,7 @@ namespace WpfApp3.DBclass
                 string value3 = ThienTai.DiaDiem;
                 int value4 = ThienTai.MucDo;
                 DateTime value5 = ThienTai.ThoiGian;
-                string sql = "INSERT INTO ThienTai(" + column1 + "," + column2 + "," + column3+ "," + column4 + "," + column5 +") VALUES (" +"'" + value1  +"'," + "'" + value2 + "'," + "'" + value3 + "'," + value4 + ",'" + value5 + "'" + ")";
+                string sql = "INSERT INTO ThienTai(" + column1 + "," + column2 + "," + column3+ "," + column4 + "," + column5 +") VALUES (" +"'" + value1  +"'," + "N'" + value2 + "'," + "N'" + value3 + "'," + value4 + ",'" + value5 + "'" + ")";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -59,6 +59,30 @@ namespace WpfApp3.DBclass
             string sql = "DELETE FROM ThienTai WHERE MaThienTai='" + value1 + "';";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
+        }
+        public void suadulieuthientai(thientai ThienTai)
+        {
+            SqlConnection conn = new SqlConnection(constring);
+            conn.Open();
+            string value1 = ThienTai.MaThienTai;
+            string value2 = ThienTai.LoaiThienTai;
+            string value3 = ThienTai.DiaDiem;
+            int value4 = ThienTai.MucDo;
+            DateTime value5 = ThienTai.ThoiGian;
+            string sql = "UPDATE ThienTai SET LoaiThienTai = N'" + value2 + "'," + "DiaDiem = N'" + value3 + "'," + "MucDoThietHai = " + value4 + ", ThoiGian = '" + value5 + "' WHERE MaThienTai = '" + value1 + "';";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public DataTable timkiemthientai(thientai ThienTai)
+        {
+            DataTable dt = new DataTable();   
+            SqlConnection conn = new SqlConnection(constring);
+            conn.Open();
+            string sql = "SELECT * FROM ThienTai";
+            SqlDataAdapter adapter= new SqlDataAdapter(sql, conn);
+            adapter.Fill(dt);
+            return dt;
         }
     }
 }

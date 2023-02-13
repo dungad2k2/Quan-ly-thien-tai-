@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -71,6 +72,48 @@ namespace WpfApp3
             {
                 MessageBox.Show("Xóa Không Thành Công");
             }
+
+        }
+
+        private void Sua_Click(object sender, RoutedEventArgs e)
+        {
+            thientai ThienTai = new thientai();
+            ThienTai.MaThienTai = Ma.Text.ToString();
+            ThienTai.LoaiThienTai = Loai.Text.ToString();
+            ThienTai.DiaDiem = Dia.Text.ToString();
+            int MucDo = int.Parse(Muc.Text);
+            ThienTai.MucDo = MucDo;
+            DateTime enteredDate = DateTime.Parse(Thoi.Text.ToString());
+            ThienTai.ThoiGian = enteredDate;
+            Dbclass db = new Dbclass();
+          
+            db.suadulieuthientai(ThienTai);
+            MessageBox.Show("Sửa Thành Công");
+        }
+
+        private void TimKiem_Click(object sender, RoutedEventArgs e)
+        {
+            thientai ThienTai = new thientai();
+            ThienTai.MaThienTai = Ma.Text.ToString();
+            
+
+            Dbclass db = new Dbclass();
+            DataTable dt = new DataTable();
+            dt = db.timkiemthientai(ThienTai);
+            DataRow[] rows = dt.Select("MaThienTai = " + "'" + ThienTai.MaThienTai + "'");
+            foreach (DataRow row in rows)
+                {
+                    string columnValue =
+                        row["MaThienTai"].ToString() + " " +
+                        row["LoaiThienTai"].ToString() + " " +
+                        row["DiaDiem"].ToString() + " " +
+                        row["MucDoThietHai"].ToString() + " " +
+                        row["ThoiGian"].ToString() + " ";
+                   MessageBox.Show(columnValue);
+                }
+
+
+
 
         }
     }

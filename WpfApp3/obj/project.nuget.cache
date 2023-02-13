@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PgCy3s4lopc9VzRGfTg5Lhmv7Y+fGTAZCzKXKXCVyqwXnuuUrW2dr32fpcvmnvH6AqktSTz8OaArOGOP6zwLGw==",
+  "dgSpecHash": "CtMQQWbAgx6j/tK9S5WMLkcmCJvAdBEgNBBTsPC6T2IUXXUSkc/O72C/DkUs1f57c2BC8mhPOakaXikcRFA+sA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dung\\source\\repos\\WpfApp3\\WpfApp3.csproj",
+  "projectFilePath": "D:\\Documents\\GitHub\\Project1\\WpfApp3\\WpfApp3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dung\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
     "C:\\Users\\Dung\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
