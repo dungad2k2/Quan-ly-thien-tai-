@@ -7,26 +7,48 @@
         mc:Ignorable="d"
         Title="ThienTai" Height="500" Width="800">
 
-    <Grid RenderTransformOrigin="0.506,0.427">
-        <Button Margin="410,356,230,96" 
-                Click="Button_Click">
+    <Grid Background="Azure">
+       <StackPanel Orientation="Vertical" Width="800" Height="200" VerticalAlignment="Bottom">
+          <StackPanel Orientation="Vertical" Width="800" Height="60">
+           <Button
+                Width="800"
+                Click ="xem_click"
+                Padding="5,2" >
+                Xem dữ liệu
+            </Button>
+           </StackPanel>
+          <StackPanel Orientation="Horizontal" Width="800" Height="100">
+            <Button 
+                
+                Width="200"
+                Click="Button_Click"
+                Padding="5,2" >
             Thêm
-        </Button>
-        <Button  Margin="641,356,10,96" Click="Button_Click_1">
+            </Button>
+            <Button  
+                 Width="200"
+                 Click="Button_Click_1" 
+                 Padding="5,2">
             Xóa
-        </Button>
-        <Button Margin="0,356,665,96" RenderTransformOrigin="0.5,1.025" Click="Sua_Click">
+            </Button>
+            <Button 
+                Width="200"
+                RenderTransformOrigin="0.5,1.025" 
+                Click="Sua_Click" Padding="5,2">
             Sửa
-        </Button>
-        <Button Height="100" Margin="300,242,349,142" Click ="xem_click" >
-            Xem dữ liệu
-        </Button>
-        <Button  Margin="190,356,456,96" Click="TimKiem_Click">
+            </Button>
+        
+            <Button  
+                 Width="200"
+                 Click="TimKiem_Click"
+                 Padding="5,2">
             Tìm Kiếm
-        </Button>
+            </Button>
+          </StackPanel>
+      </StackPanel>
         <TextBox x:Name="Ma" 
                  Margin="10,65,520,364"
-                 RenderTransformOrigin="0.375,0.46"
+                 RenderTransformOrigin="1.264,1.817"
                  TextWrapping="Wrap"
                  >Mã thiên tai</TextBox>
         <TextBox 

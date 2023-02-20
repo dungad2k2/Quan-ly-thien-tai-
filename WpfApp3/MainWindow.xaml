@@ -15,13 +15,32 @@
         Title="MainWindow" Height="450" Width="800">
     
     <Grid>
-        <Button Width="200" Height="100" Content="Dữ liệu thiên tai" Margin="448,49,152,285" Click="Thientai_click"/>
-        <Button Width="200" Height="100" Margin="448,277,152,57" Content="Dữ liệu nước sạch" Background="Black" Click="NuocSachClick"/>
-        <TextBlock 
+        <Button Width="200"
+                Height="100" 
+                Content="Dữ liệu thiên tai" 
+                Click="Thientai_click" 
+                VerticalAlignment="Center"
+                Background="BlueViolet"
+                HorizontalAlignment="Left"/>
+        <Button Width="200" 
+                Height="100" 
+                Content="Dữ liệu nước sạch" 
+                Background="Black" 
+                Click="NuocSachClick"/>
+        <Button Width="200" 
+                Height="100" 
+                Content="Dữ liệu vệ sinh môi trường"
+                Background="CadetBlue"
+                HorizontalAlignment="Right"></Button>
+        <StackPanel Orientation="Vertical" Width="800" Height="100" VerticalAlignment="Top" Background="Azure">
+            <TextBlock 
                    TextWrapping="WrapWithOverflow"
-                   FontSize="24" Margin="27,10,517,367" >
-           <Bold> Chào mừng quay trở lại </Bold>
-        </TextBlock>
-        
+                   FontSize="30" 
+                   VerticalAlignment="Top"
+                   Width="350">
+                <Bold> Chào mừng quay trở lại </Bold>
+            </TextBlock>
+        </StackPanel>
+
     </Grid>
 </Window>
