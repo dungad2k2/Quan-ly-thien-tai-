@@ -13,26 +13,29 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
-    
+    <Window.Background>
+        <ImageBrush ImageSource="Image/Mainimage.png"/>
+    </Window.Background>
     <Grid>
         <Button Width="200"
                 Height="100" 
                 Content="Dữ liệu thiên tai" 
                 Click="Thientai_click" 
                 VerticalAlignment="Center"
+                Margin="150"
+                Padding="5.2"
                 Background="BlueViolet"
                 HorizontalAlignment="Left"/>
         <Button Width="200" 
                 Height="100" 
                 Content="Dữ liệu nước sạch" 
-                Background="Black" 
-                Click="NuocSachClick"/>
-        <Button Width="200" 
-                Height="100" 
-                Content="Dữ liệu vệ sinh môi trường"
-                Background="CadetBlue"
-                HorizontalAlignment="Right"></Button>
-        <StackPanel Orientation="Vertical" Width="800" Height="100" VerticalAlignment="Top" Background="Azure">
+                Background="CadetBlue" 
+                Click="NuocSachClick"
+                Margin="150"
+                Padding="5.2"
+                HorizontalAlignment="Right"/>
+        
+        <StackPanel Orientation="Vertical" Width="800" Height="100" VerticalAlignment="Top" >
             <TextBlock 
                    TextWrapping="WrapWithOverflow"
                    FontSize="30" 
